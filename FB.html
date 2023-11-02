@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakebook - log in or sign up</title>
+    <link rel="shortcut icon" href="Images/fbk2.ico" type="image/x-icon">
+    </head>
+    <style>
+        *{background-color: #F0F2F5; margin: 0px; padding: 0px; font-family:Helvetica; text-decoration: none;}
+       .mainbg{
+            display: flex; 
+            height: 600px; width: 90%;
+            flex-wrap: wrap; align-items: center; gap: 20px; padding: 50px;
+            justify-content: space-evenly;
+        }
+        .form1{
+            align-items: center;
+            background-color: #FFFFFF;
+            width: 380px; height: 330px;
+            padding: 10px 5px 20px 5px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 6px -7px;
+        }
+        input[type='text'], input[type='password']{
+            display: block; height: 20px ;
+            background-color: #FFFFFF;
+            margin: auto; border: 1.5px solid rgb(200, 200, 200);
+            width: 340px; padding: 13px 10px; border-radius: 8px; text-align: left;
+            color: black; font-size: 16px; margin-top: 6px;
+        }
+    
+        button{
+            display: block;
+            border: none;
+            background-color: #1877F2; color: white;
+            margin: auto; width: 360px; 
+            border-radius: 5px; padding: 11px 0px; cursor: pointer;
+        }
+        .fpws{
+            display: block; margin: auto; width: 220px; background-color: #FFFFFF;
+            color: #1877F2; font-weight: 500px; text-align: center;
+        }
+        .line{
+            border: 1px solid #222;
+            opacity: 0.12; margin-bottom: 8px;
+        }
+        .btn1{
+            font-size: 16px; font-weight: 800; word-spacing: 1px; 
+            letter-spacing: 0.8px;
+        }
+        .btn2{
+            width: 220px; font-size: 16px; background-color: #42b72a; padding: 13px 0px;
+            text-align: center; font-weight: 700; word-spacing: 1px; letter-spacing: 0.2px;
+        }
+        .link2{
+            width: 270px; color: black;
+            font-size: 16px; font-weight: 500;
+            padding: 20px 10px 10px 56px ; text-align: center; margin-top: 5px;
+        }
+        .link2 a{
+            color: black; font-weight: bold; font-size: 17px;
+        }
+        .fbcontainer{
+           width: auto;
+        }
+        .formct{
+           width: auto;
+        }
+        .p1{
+            font-size: 28px; font-weight: 700px; word-spacing: 3px; padding: 20px 10px 10px 2px;
+        }
+        .signup{
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 432px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,.1), 0 8px 16px rgba(0,0,0,.1);
+            padding-bottom: 18px; border-radius: 8px;
+            display: none;
+        }
+        .top{
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 10px 18px;
+        }
+        .top>div>h2{
+            font-size: 32px; font-weight: bold;
+        }
+        .top img{
+            padding-bottom: 35px; cursor: pointer; width: 25px;
+        }
+        .signup_body{
+            display: flex; flex-wrap: wrap; padding: 0px 15px;
+        }
+        .name{
+            display: flex; gap: 10px;
+            margin: 15px 0px; width: 50%;
+        }
+        .bottom input{
+            width: 370px; gap: 10px; margin-bottom: 15px;
+        }
+        .birthday{
+            padding: 10px 10px; font-size: 20px;
+        }
+        .birthday input{
+            font-size: 20px; cursor: pointer; border: 2px solid black; margin-left: 20px;
+        }
+        .gender{
+            padding: 10px 10px;
+        }
+        .gender .person{
+            display: flex; justify-content: space-between; margin-top: 5px;
+        }
+        .gender>.person>div{
+            display: flex;
+            font-size: 16px; border: 1px solid rgba(0, 0, 0, 0.484);
+            padding: 7px; gap: 15px; margin-left: 15px; margin-top: 10px;
+        }
+        .show{
+            display: block;
+        }
+    
+    </style>
+    <script>
+        function insert(){
+        document.getElementById("fbktxt").src="Images/fbktxt.png"
+        document.getElementById("cross").src="Images/cross.png"
+        }
+        const show = ()=>{
+        const x = document.querySelector("#sign")
+        x.classList.toggle("show")
+        }
+        const us = ()=>{
+        const x = document.querySelector("#sign")
+        x.classList.toggle("show")
+        }
+    </script>
+<body onload="insert()">
+    <div class="mainbg">
+        <div class="fbcontainer">
+            <img id="fbktxt" src="" alt="fakebook" height="60px" width="310px">
+            <p class="p1">Fakebook helps you connect and share <br>with the people in your life.</p>
+        </div>
+        <div class="formct">
+            <form class="form1" action="">
+                <input type="text" placeholder="Email address or phone number"> <br>
+                <input type="password" placeholder="Password"> <br>
+                <button type="submit" class="btn1" onclick="window.alert('Message')">Log in</button> <br>
+                <a href="" class="fpws">Forgotten Password?</a> <br>
+                <div class="line"></div> <br>
+                <button type="button" class="btn2" onclick="show()">Create new account</button>
+             </form>
+        
+               
+            <div class="link2">
+                <a href="">Create a Page</a> for a celebrity, brand or business.
+            </div>
+        </div>
+   <!-- -------------sign up form----------------- -->
+
+   <div class="signup" id="sign">
+    <div class="top">
+        <div>
+            <h2>Sign Up</h2>
+            <p>It's Quick and easy</p>
+        </div>
+        <img id="cross" src="" alt="" onclick="us()">
+    </div>
+    <div class="line"></div>
+    <form action="" onsubmit="sub()">
+      <div class="signup_body">
+          <div class="name">
+            <input type="text" placeholder="First Name" id="fn"> 
+            <input type="text" placeholder="Last Name" id="ln">
+          </div>
+        <div class="bottom">
+            <input type="text" placeholder="Email or Phone Number" id="em">
+            <input type="password" placeholder="New Password" id="pw">
+        </div>
+        <div class="birthday">
+            <p>Birthday:  <input type="date" name="" id="bd"></p>
+            <!-- <div class="date"> -->
+                
+                <!-- <select name="" id="">
+                    <option value="jan">January</option>
+                    <option value="feb">February</option>
+                    <option value="mar">March</option>
+                    <option value="apr">April</option>
+                    <option value="may">May</option>
+                    <option value="jun">June</option>
+                    <option value="jul">July</option>
+                    <option value="aug">August</option>
+                    <option value="sep">September</option>
+                    <option value="oct">October</option>
+                    <option value="nov">Novemer</option>
+                    <option value="dec">December</option>
+                </select> -->
+                
+            <!-- </div> -->
+        </div>
+        <div class="gender">
+            <p style="font-size: 20px;">Gender: </p>
+         <div class="person">
+             <div>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="Female">
+             </div>
+             <div>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="Male">
+             </div>
+             <div>
+            <label for="other">Others......</label>
+            <input type="radio" name="gender" id="other" value="Others">
+             </div>
+         </div>
+        </div>
+        <button type="submit" class="btn2" style="margin-top: 25px;">Sign Up</button>
+
+
+
+
+
+      </div>
+    </form>
+   </div>
+
+
+</div>
+    
+</body>
+<script>
+    function sub(){
+           var fn=document.getElementById("fn").value;
+           var ln=document.getElementById("ln").value;
+           var em=document.getElementById("em").value;
+           var pw=document.getElementById("pw").value;
+           var bd=document.getElementById("bd").value;
+           var gd=document.getElementsByName("gender").value;
+
+            window.alert(`Name is: ${fn} ${ln}, Email is: ${em}, Password is ${pw}, Birthday is: ${bd}, Gender is: ${gd}`)
+        }
+</script>
+</html>
